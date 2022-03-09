@@ -13,10 +13,14 @@
     color: #ffffff;
   }
   .back-style{
-    color: #ffffff;
-    font-weight: lighter;
+    
     margin-top:6%;
     margin-left: 2%;
+  }
+  a {
+    color: #ffffff !important;
+    font-weight: lighter;
+    text-decoration: none;
   }
   .table-header{
     margin-left: 9%;

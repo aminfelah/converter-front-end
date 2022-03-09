@@ -1,12 +1,13 @@
 import "./historyview.css";
-
+import { Link } from "react-router-dom";
 function Historyview() {
   return (
     <div>
       <div className="image-css">
         <img width="10%" height="5%" alt="hatch-title" src="/hatch-logo.png" />
       </div>
-      <h5 className="back-style">{"<"} Go back </h5>
+      
+      <h5 className="back-style"><Link to="/">{"<"} Go back </Link></h5>
       <div className="table-header">
         <span className="header-style">Date</span>
         <span className="header-style">From</span>
