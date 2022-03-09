@@ -30,7 +30,7 @@ function Converterform() {
         </div>
         <button class="dropbtn">convert</button>
       </div>
-      <h5 className="link-style">view conversion history</h5>
+      <h5 className="link-style">view conversion history {">"}</h5>
     </div>
     <h3 className="pre-result-style">0 USD=</h3>
     <h1 className="result-style">0 EUR</h1>
