@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Converterform from "./components/converterform";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="image-css">
+      <img width="10%" height="5%" alt="hatch-title" src="/hatch-logo.png" />
+      </div>
+      <div className="title-margin-css">
+      <h1 className="title-css">Convert currencies in real-time.</h1>
+      </div>
+      <Converterform></Converterform>
     </div>
   );
 }
