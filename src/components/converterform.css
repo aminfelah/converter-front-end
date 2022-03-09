@@ -1,5 +1,71 @@
-.form-css{
-    margin-top: 5%;
+.form-css {
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1%;
+  justify-content: space-around;
+}
+.form-container {
+  background-color: #353535;
+  width: 70%;
+  height: 60%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.champ {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.label-style {
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-weight: lighter;
+}
+.link-style {
+  color: #ffffff;
+  font-weight: lighter;
+}
+.dropbtn {
+  background-color: #f3ff0a;
+  color: #2b2c18;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 15%;
+  border: none;
+}
+.input-style {
+  background-color: #454545;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+}
+.option-style {
+  background-color: #454545;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+  height: 38px;
+  width: 185px;
+}
+.form-style{
     background-color: #252525;
-    height: 60vh;
+  height: 80vh;
+}
+.pre-result-style{
+    font-weight:lighter;
+    margin-left: 8%;
+    color: #ffffff;
+}
+.result-style{
+  
+    margin-left: 8%;
+    color: #ffffff;
 }
