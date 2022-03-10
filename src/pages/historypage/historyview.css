@@ -55,4 +55,8 @@
    .box-style{
     color: #ffffff;
    }
-    
+   .history-background{
+
+    background: linear-gradient(0deg, #1a1a1a 50%,  #1a1a1a 50% 50%);
+    height: 100vh;
+  }

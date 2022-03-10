@@ -4,7 +4,7 @@ import "./converterview.css";
 
 function Converterview() {
   return (
-    <div >
+    <div className="converter-background" >
       <div className="image-css">
       <img width="10%" height="5%" alt="hatch-title" src="/hatch-logo.png" />
       </div>

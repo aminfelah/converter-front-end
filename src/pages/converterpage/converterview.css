@@ -12,3 +12,8 @@
     font-size: 250%;
     color: #ffffff;
   }
+  .converter-background{
+    background: linear-gradient(0deg, #252525 50%,  #1a1a1a 50% 50%);
+    height: 100vh;
+  }
+ 
