@@ -1,6 +1,19 @@
 import "./historyview.css";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 function Historyview() {
+  const [conversionList, setConversionList] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        `http://localhost:3000/convertions`
+      )
+      .then((res) => {
+        
+        setConversionList(res.data);
+      });
+  }, []);
   return (
     <div>
       <div className="image-css">
@@ -14,36 +27,19 @@ function Historyview() {
         <span className="header-style">To</span>
       </div>
       <div className="table-container">
-        <div className="box">
-          <span className="box-style">FEB 25,2022</span>
-          <span className="box-style">1.00 EUR</span>
-          <span className="box-style">1.12392 USD</span>
-        </div>
-        <div className="box">
-          <span className="box-style">FEB 25,2022</span>
-          <span className="box-style">1.00 EUR</span>
-          <span className="box-style">1.12392 USD</span>
-        </div>
-        <div className="box">
-          <span className="box-style">FEB 25,2022</span>
-          <span className="box-style">1.00 EUR</span>
-          <span className="box-style">1.12392 USD</span>
-        </div>
-        <div className="box">
-          <span className="box-style">FEB 25,2022</span>
-          <span className="box-style">1.00 EUR</span>
-          <span className="box-style">1.12392 USD</span>
-        </div>
-        <div className="box">
-          <span className="box-style">FEB 25,2022</span>
-          <span className="box-style">1.00 EUR</span>
-          <span className="box-style">1.12392 USD</span>
-        </div>
-        <div className="box">
-          <span className="box-style">FEB 25,2022</span>
-          <span className="box-style">1.00 EUR</span>
-          <span className="box-style">1.12392 USD</span>
-        </div>
+      {conversionList.map((value, index) => {
+                return <div className="box" key={index}>
+                <span className="box-style">{value.date}</span>
+                <span className="box-style">{value.fromcurrency}</span>
+                <span className="box-style">{value.tocurrency}</span>
+              </div>;
+              })}
+       
+        
+        
+        
+        
+        
       </div>
     </div>
   );

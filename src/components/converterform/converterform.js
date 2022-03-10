@@ -18,9 +18,18 @@ function Converterform() {
       });
   }, []);
   const convert= () => {
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    
     axios.get("http://apilayer.net/api/live?access_key=8122ebcb8643d4b4ebe0a9a0993b5601&currencies="+firstCurrency+","+secondCurrency+"&source=USD&format=1").then(
       (res)=>{
-        setResult(convertValue*Object.values(res.data.quotes)[1]/Object.values(res.data.quotes)[0])
+        setResult((convertValue*Object.values(res.data.quotes)[1]/Object.values(res.data.quotes)[0]).toFixed(2))
+        const myreq ={
+          "fromcurrency":convertValue+" "+firstCurrency,
+          "tocurrency":(convertValue*Object.values(res.data.quotes)[1]/Object.values(res.data.quotes)[0]).toFixed(2)+" "+secondCurrency,
+          "date":date
+        }
+        axios.post("http://localhost:3000/convertions",myreq)
       }
     )
   }
