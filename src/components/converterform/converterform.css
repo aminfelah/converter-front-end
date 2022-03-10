@@ -1,4 +1,5 @@
 .form-css {
+  margin-top: 10vh;
   height: 40%;
   display: flex;
   flex-direction: row;
@@ -9,11 +10,14 @@
   background-color: #353535;
   width: 70%;
   height: 60%;
+  padding-top: 2.5%;
+  padding-bottom: 3%;
   border-radius: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  box-shadow: 5px 5px 50px#181818;
 }
 .champ {
   display: flex;
@@ -29,6 +33,7 @@
 .link-style {
   color: #ffffff;
   font-weight: lighter;
+  margin-top: 11vh;
 }
 .dropbtn {
   background-color: #f3ff0a;
@@ -55,10 +60,7 @@
   height: 38px;
   width: 185px;
 }
-.form-style{
-    background-color: #252525;
-  height: 80vh;
-}
+
 .pre-result-style{
     font-weight:lighter;
     margin-left: 8%;

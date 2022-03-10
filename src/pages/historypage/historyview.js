@@ -15,7 +15,7 @@ function Historyview() {
       });
   }, []);
   return (
-    <div>
+    <div className="background-color">
       <div className="image-css">
         <img width="10%" height="5%" alt="hatch-title" src="/hatch-logo.png" />
       </div>

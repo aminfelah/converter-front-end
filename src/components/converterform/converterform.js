@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 function Converterform() {
   const [convertValue, setConvertValue] = useState(0);
-  const [firstCurrency, setFirstCurrency] = useState('USD');
-  const [secondCurrency, setSecondCurrency] = useState('EUR');
+  const [firstCurrency, setFirstCurrency] = useState('AED');
+  const [secondCurrency, setSecondCurrency] = useState('AED');
   const [currencyList, setCurrencyList] = useState([]);
   const [result, setResult] = useState(0);
   useEffect(() => {
@@ -34,7 +34,7 @@ function Converterform() {
     )
   }
   return (
-    <div className="form-style">
+    <div>
       <div className="form-css">
         <div className="form-container">
           <div className="champ">
@@ -43,6 +43,7 @@ function Converterform() {
               type="number"
               onChange={(e) => setConvertValue(e.target.value)}
               className="input-style"
+              placeholder="0.00"
             />
           </div>
           <div className="champ">
@@ -74,7 +75,7 @@ function Converterform() {
           </button>
         </div>
         <h5 className="link-style">
-          <Link to="/history"> view conversion history {">"}</Link>
+          <Link to="/history"> View conversion history {">"}</Link>
         </h5>
       </div>
       {(convertValue === undefined || convertValue === "") && (
